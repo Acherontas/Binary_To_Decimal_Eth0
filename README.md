@@ -146,4 +146,4 @@ Broadcast Ip Addr :                   11000000.00000000.00000000.11000111 (192.0
 with 0 0 0 0 and using 192 0 0 199 and calculating resulting to --> 192.0.0.200
 ur next network maybe is              11000000.00000000.00000000.11001000 (192.0.0.200)
 
-for any info contact me at acherontia.myosotis@gmail.com
+for any info contact me at acherontia.myosotis@gmail.com 
