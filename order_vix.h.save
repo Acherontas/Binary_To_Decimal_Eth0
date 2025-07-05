@@ -1,0 +1,21 @@
+#ifndef ORDER_VIX_H
+#define ORDER_VIX_H
+
+
+class order_vix
+{
+    public:
+        order_vix();
+        virtual ~order_vix();
+        order_vix(const order_vix& other);
+        order_vix& operator=(const order_vix& other);
+        int cnv_string_to_int_vec(string myarr);
+        vector<int> abc;
+        int return_max(vector<int> a);
+        int return_min(vector<int> b);
+    protected:
+
+    private:
+};
+
+#endif // ORDER_VIX_H

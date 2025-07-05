@@ -1,0 +1,137 @@
+#include "start_of.h"
+#include <string>
+#include <iostream>
+using namespace std;
+start_of::start_of(){}//ctor
+
+start_of::~start_of(){}//dtor
+
+start_of::start_of(const start_of& other){}//copy ctor
+
+start_of& start_of::operator=(const start_of& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+int start_of::ip_to_arr(string myipgw){
+if(bg==-1){
+    cout<<"entering once ";
+    cout<<"moving to array " << myipgw <<"\n";
+    this->arofip+=myipgw;
+    string tmp_str;int xtmp=0;int ctof=0;
+    for(int i=0;i<=myipgw.size()-1;i++){
+       tmp_str+=myipgw.at(i);
+       if(myipgw.at(i)=='.'){
+       xtmp=stoi(tmp_str);
+       this->arr_of_ip[ctof]=xtmp;
+     //  cout<<"arr of ip " << this->arr_of_ip[ctof] <<"\n";
+       ctof+=1;
+       xtmp=0;
+       tmp_str.clear();
+       }
+    }
+    bg+=1;
+    }
+   return 0;
+}
+
+int start_of::dvn_net(string dvn){
+//checking for 255 sequence
+//cout<<"dvnt " << dvn <<" ---> ";
+string mp;
+string newmp;
+int ch_one=0;
+int ch_two=0;
+int ch_three=0;
+int ch_four=0;
+int newarr[4];int nar=0;
+int loc=0;int cnt=0;int cntar[4];
+dvn+=".";
+for(int i=0;i<=dvn.size()-1;i++){
+   mp+=dvn.at(i);
+   if(dvn.at(i)=='.'){
+    if(mp=="255"){cntar[nar]=255;nar+=1;mp.clear();cnt+=1; }
+    if(mp!="255"){cntar[nar]=stoi(mp);nar+=1;mp.clear();}
+    //cout<<"dvn mp" << mp << " cntar " << cntar[nar-1] <<"\n";
+   }
+ }
+
+for(int i=3;i>=0;i-=2){
+    if(cntar[i]==255){
+    cntar[i]=0; ch_four=1;
+    cntar[i-1]=(cntar[i-1]+1); ch_three=1;
+    if(cntar[i-1]>=255){
+    cntar[i-1]=0; ch_three+=1;
+    cntar[i-2]=(cntar[i-2]+1); ch_two=1;
+    }
+    if(cntar[i-2]>=255){
+    cntar[i-2]=0; ch_two+=1;
+    cntar[i-3]=(cntar[i-3]+1); ch_one=1;
+    }
+    loc=1;
+    }
+}
+//for(int i=0;i<=3;i++){cout<<"new dvn_net " << cntar[i] << " ";}
+//cout<<"\n";
+//int lx=0;
+//if(cntar[0]<255 && cntar[1]<255 && cntar[2]<255 && cntar[3]<255){
+//cout<<"increasing the last one only \n";
+//cntar[3]=cntar[3]+1;lx=-1;
+//}
+//if(lx==0 && cntar[3]>=255){
+//cout<<"zeroing 4th\n";
+//cntar[3]=0; lx=1;
+//}
+//if(lx==1){
+//if(cntar[2]>=255){
+//cout<<"zeroing 3th\n";
+//cntar[2]=0;
+//}
+//if(cntar[1]>=255){
+//cout<<"zeroing 2th\n";
+//cntar[1]=0;
+//}
+//if(cntar[0]>=255){
+//cout<<"zeroing 1th\n";
+//cntar[0]=0;
+//}
+//goto C;
+//}
+//C:
+cout<<"with " << ch_one << " " << ch_two << " " << ch_three << " " << ch_four<<"\n";
+cout<<" and using " << cntar[0] << " " << cntar[1] << " " << cntar[2] << " " << cntar[3] <<"\n";
+cout<<"and calculating \n";
+
+if(ch_one>=1) {
+  if(cntar[0]>=256){
+     cntar[0]=0;
+     }
+}
+
+if(ch_one==0 && ch_two==0 && ch_three==0 && ch_four==0){
+   cntar[3]=cntar[3]+1;
+   }
+
+newmp+=to_string(cntar[0]);
+newmp+=".";
+newmp+=to_string(cntar[1]);
+newmp+=".";
+newmp+=to_string(cntar[2]);
+newmp+=".";
+newmp+=to_string(cntar[3]);
+c
+this->ndvn+=newmp;
+return loc;
+}
+
+int start_of::simple_to_arr(string ip){
+ip+=".";
+string mip;int ct=0;
+for(int i=0;i<=ip.size()-1;i++){
+mip+=ip.at(i);
+if(ip.at(i)=='.'){st_to_arr[ct]=stoi(mip);ct+=1;mip.clear();}
+}
+return 0;
+}

@@ -1,0 +1,81 @@
+#include "str_int_str.h"
+#include <string>
+#include <string.h>
+#include <iostream>
+
+using namespace std;
+Str_int_Str::Str_int_Str(){} //ctor
+
+Str_int_Str::~Str_int_Str(){} //dtor
+
+Str_int_Str::Str_int_Str(const Str_int_Str& other){} //copy ctor
+
+Str_int_Str& Str_int_Str::operator=(const Str_int_Str& rhs){
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+int Str_int_Str::process_of_string(string to_process){
+   string semi_part;
+   int mynum;
+   char kl='.';
+   int l=-3;
+   int last_teleia_loc=0;
+   for(int i=0;i<=to_process.size()-1;i++){
+      semi_part+=to_process.at(i);
+     cout<<"semi part " << semi_part <<"\n";
+      if(to_process.at(i)==kl  ){
+      mynum=stoi(semi_part);prosfs+=1;
+      cout<<"sending to reverse " << mynum <<" with itter prosfs "<< prosfs <<" ";
+      processit(mynum,prosfs);
+      cout<<"returning " << fnl_binary <<"\n";
+      semi_part.clear();mynum=0;
+      }
+     if(prosfs==3){break;}
+    }
+   for(int i=0;i<=to_process.size()-1;i++){
+   if(to_process.at(i)=='.'){
+   last_teleia_loc=i;}
+   }
+  //  cout<<"with prosfs outter " << prosfs <<" and location as " << last_teleia_loc << " with next value as " << to_process.at(last_teleia_loc+1) << "\n";
+    for(int j=last_teleia_loc+1;j<=to_process.size()-1;j++){
+      semi_part.clear();mynum=0;
+      semi_part+=to_process.at(j);
+      mynum=stoi(semi_part);
+      //prosfs+=1;
+    }
+   //   cout<<"last 3 digits " << semi_part << " as int num " << mynum <<  " and prosfs " << prosfs << " " ;
+      processit(mynum,4);
+    //  cout<<"returning with " << fnl_binary <<"\n";
+   return 0;
+}
+
+int Str_int_Str::processit(int num,int tri){
+  if(num>255){cout<<"unable to process number bigger than 255 exiting \n";return -1;}
+  string tmp;tmp.clear();
+  int binarynum[8];int i=0;pvt=0;
+  while(num>0){binarynum[i]=num%2;num=num/2;i++;pvt+=1;}
+  for(int j=i-1;j>=0;j--){tmp+=to_string(binarynum[j]);}
+  if(pvt==8){fnl_binary+=tmp;}
+  if(pvt<8){
+  int lo=8-pvt;
+  string add_them;add_them.clear();
+  for(int i=1;i<=lo;i++){add_them+="0";}
+  string apfix;apfix.clear();
+  apfix+=add_them;
+  apfix+=tmp;
+  fnl_binary+=apfix;
+  cnt=8;
+  }
+  if(tri!=4){
+  fnl_binary+=".";}
+  cnt+=1;
+  return 0;
+}
+
+string Str_int_Str::returnstr(){
+return fnl_binary;
+}
+
+

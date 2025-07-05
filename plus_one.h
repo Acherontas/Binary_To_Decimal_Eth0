@@ -1,0 +1,20 @@
+#ifndef PLUS_ONE_H
+#define PLUS_ONE_H
+#include <string>
+#include <iostream>
+using namespace std;
+
+class plus_one
+{
+    public:
+        plus_one();
+        virtual ~plus_one();
+        plus_one(const plus_one& other);
+        plus_one& operator=(const plus_one& other);
+        string get_bd_to_new(string bd);
+    protected:
+
+    private:
+};
+
+#endif // PLUS_ONE_H

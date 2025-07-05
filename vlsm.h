@@ -1,0 +1,22 @@
+#ifndef VLSM_H
+#define VLSM_H
+#include <vector>
+#include <string>
+#include <iostream>
+using namespace std;
+class vlsm
+{
+    public:
+        string hold_to_move;
+        vlsm();
+        virtual ~vlsm();
+        vlsm(const vlsm& other);
+        vlsm& operator=(const vlsm& other);
+        int gen_them(int arr[],vector<string> soe,vector<string> user_can_hold,vector<string> arr_of_sm,vector<string> mask_as_zone);
+
+    protected:
+
+    private:
+};
+
+#endif // VLSM_H

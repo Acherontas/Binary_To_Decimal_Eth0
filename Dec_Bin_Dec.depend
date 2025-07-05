@@ -1,0 +1,211 @@
+# depslib dependency file v1.0
+1710762348 source:/home/acherontas/codeblock/Dec_Bin_Dec/main.cpp
+	<iostream>
+	"str_int_str.h"
+	"masks.h"
+	"bin_to_dec.h"
+	"vlsm.h"
+	<thread>
+	<vector>
+	<bits/stdc++.h>
+	"order_them.h"
+
+1701754402 /home/acherontas/codeblock/Dec_Bin_Dec/str_int_str.h
+	<string>
+	<string.h>
+
+1701754402 source:/home/acherontas/codeblock/Dec_Bin_Dec/str_int_str.cpp
+	"str_int_str.h"
+	<string>
+	<string.h>
+	<iostream>
+
+1710690391 source:/home/acherontas/codeblock/Dec_Bin_Dec/masks.cpp
+	"masks.h"
+	<iostream>
+	<chrono>
+	<string>
+	<string.h>
+	<thread>
+	"bin_to_dec.h"
+	"str_int_str.h"
+	"start_of.h"
+	<vector>
+
+1710690391 /home/acherontas/codeblock/Dec_Bin_Dec/masks.h
+	<string>
+	<string.h>
+	<iostream>
+
+1701754402 /home/acherontas/codeblock/Dec_Bin_Dec/bin_to_dec.h
+	<iostream>
+	<string>
+	<string.h>
+
+1701754402 source:/home/acherontas/codeblock/Dec_Bin_Dec/bin_to_dec.cpp
+	"bin_to_dec.h"
+
+1708865804 source:/home/acherontas/codeblock/Dec_Bin_Dec/expandee.cpp
+	"expandee.h"
+	<vector>
+	<thread>
+
+1708856963 /home/acherontas/codeblock/Dec_Bin_Dec/expandee.h
+	<string>
+	"string.h"
+	<iostream>
+
+1701754402 /home/acherontas/codeblock/Dec_Bin_Dec/vlsm.h
+	<vector>
+	<string>
+	<iostream>
+
+1710690465 source:/home/acherontas/codeblock/Dec_Bin_Dec/vlsm.cpp
+	"vlsm.h"
+	"masks.h"
+	<vector>
+	<string>
+	<iostream>
+	"bin_to_dec.h"
+	"str_int_str.h"
+
+1701754402 source:/home/acherontas/codeblock/Dec_Bin_Dec/plus_one.cpp
+	"plus_one.h"
+	<iostream>
+	<string>
+
+1701754402 /home/acherontas/codeblock/Dec_Bin_Dec/plus_one.h
+	<string>
+	<iostream>
+
+1701754402 /home/acherontas/codeblock/Dec_Bin_Dec/start_of.h
+	<string>
+	<iostream>
+
+1710688298 source:/home/acherontas/codeblock/Dec_Bin_Dec/start_of.cpp
+	"start_of.h"
+	<string>
+	<iostream>
+
+1710678806 source:/home/acherontas/codeblock/Dec_Bin_Dec/conv_it.cpp
+	"conv_it.h"
+	<iostream>
+	<stdlib.h>
+	<iomanip>
+	<string>
+
+1710678392 /home/acherontas/codeblock/Dec_Bin_Dec/conv_it.h
+	<iostream>
+	<stdlib.h>
+	<iomanip>
+	<string>
+
+1710764286 source:/home/acherontas/codeblock/Dec_Bin_Dec/order_them.cpp
+	"order_them.h"
+	<list>
+	<vector>
+	<iostream>
+
+1710761658 /home/acherontas/codeblock/Dec_Bin_Dec/order_them.h
+	<vector>
+
+1701754402 source:/home/acherontas/Documents/Dec_Bin_Dec/bin_to_dec.cpp
+	"bin_to_dec.h"
+
+1701754402 /home/acherontas/Documents/Dec_Bin_Dec/bin_to_dec.h
+	<iostream>
+	<string>
+	<string.h>
+
+1710678806 source:/home/acherontas/Documents/Dec_Bin_Dec/conv_it.cpp
+	"conv_it.h"
+	<iostream>
+	<stdlib.h>
+	<iomanip>
+	<string>
+
+1710678392 /home/acherontas/Documents/Dec_Bin_Dec/conv_it.h
+	<iostream>
+	<stdlib.h>
+	<iomanip>
+	<string>
+
+1710690391 source:/home/acherontas/Documents/Dec_Bin_Dec/masks.cpp
+	"masks.h"
+	<iostream>
+	<chrono>
+	<string>
+	<string.h>
+	<thread>
+	"bin_to_dec.h"
+	"str_int_str.h"
+	"start_of.h"
+	<vector>
+
+1710690391 /home/acherontas/Documents/Dec_Bin_Dec/masks.h
+	<string>
+	<string.h>
+	<iostream>
+
+1701754402 /home/acherontas/Documents/Dec_Bin_Dec/str_int_str.h
+	<string>
+	<string.h>
+
+1701754402 /home/acherontas/Documents/Dec_Bin_Dec/start_of.h
+	<string>
+	<iostream>
+
+1710764286 source:/home/acherontas/Documents/Dec_Bin_Dec/order_them.cpp
+	"order_them.h"
+	<list>
+	<vector>
+	<iostream>
+
+1710761658 /home/acherontas/Documents/Dec_Bin_Dec/order_them.h
+	<vector>
+
+1701754402 source:/home/acherontas/Documents/Dec_Bin_Dec/plus_one.cpp
+	"plus_one.h"
+	<iostream>
+	<string>
+
+1701754402 /home/acherontas/Documents/Dec_Bin_Dec/plus_one.h
+	<string>
+	<iostream>
+
+1710688298 source:/home/acherontas/Documents/Dec_Bin_Dec/start_of.cpp
+	"start_of.h"
+	<string>
+	<iostream>
+
+1701754402 source:/home/acherontas/Documents/Dec_Bin_Dec/str_int_str.cpp
+	"str_int_str.h"
+	<string>
+	<string.h>
+	<iostream>
+
+1710764700 source:/home/acherontas/Documents/Dec_Bin_Dec/vlsm.cpp
+	"vlsm.h"
+	"masks.h"
+	<vector>
+	<string>
+	<iostream>
+	"bin_to_dec.h"
+	"str_int_str.h"
+
+1701754402 /home/acherontas/Documents/Dec_Bin_Dec/vlsm.h
+	<vector>
+	<string>
+	<iostream>
+
+1732277356 source:/home/acherontas/Documents/Dec_Bin_Dec/main.cpp
+	<iostream>
+	"str_int_str.h"
+	"masks.h"
+	"bin_to_dec.h"
+	"vlsm.h"
+	<thread>
+	<vector>
+	<bits/stdc++.h>
+	"order_them.h"
+

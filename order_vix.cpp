@@ -1,0 +1,18 @@
+#include "order_vix.h"
+
+order_vix::order_vix(){}//ctor
+
+order_vix::~order_vix(){}//dtor
+
+order_vix::order_vix(const order_vix& other){}//copy ctor
+
+order_vix& order_vix::operator=(const order_vix& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+order_vix::return_max(vector<int> a){}
+
+order_vix::return_min(vector<int> b){}

@@ -1,0 +1,42 @@
+#include "bin_to_dec.h"
+
+bin_to_dec::bin_to_dec(){}//ctor
+
+bin_to_dec::~bin_to_dec(){}//dtor
+
+bin_to_dec::bin_to_dec(const bin_to_dec& other){}//copy ctor
+
+bin_to_dec& bin_to_dec::operator=(const bin_to_dec& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+string bin_to_dec::convert_bdec(string mystring){
+    string num = mystring;
+    int dec_value = 0;
+    int base = 1;
+    int len = num.length();
+    for (int i = len - 1; i >= 0; i--) {
+         if (num[i]== '1' ) {
+         dec_value += base;
+         }
+        base = base * 2;
+        if(num[i]=='.'){fnl_rev+=to_string(dec_value); fnl_rev+="."; one[x]=dec_value; x+=1; dec_value=0;base=1;}
+    }
+        fnl_rev+=to_string(dec_value); one[x]=dec_value;
+        rev_fix.clear();
+        rev_fix+=to_string(one[x]);rev_fix+=".";rev_fix+=to_string(one[x-1]);
+        rev_fix+=".";rev_fix+=to_string(one[x-2]);rev_fix+=".";rev_fix+=to_string(one[x-3]);
+        rev_one_ver[0]=one[x];
+        rev_one_ver[1]=one[x-1];
+        rev_one_ver[2]=one[x-2];
+        rev_one_ver[3]=one[x-3];
+        return rev_fix;
+}
+int bin_to_dec::clear_tmparr(){
+fnl_rev.clear();rev_fix.clear();
+for(int i=0;i<=4;i++){one[i]=0;rev_one_ver[i]=0;}
+return 0;
+}

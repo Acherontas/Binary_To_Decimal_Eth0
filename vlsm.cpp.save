@@ -1,0 +1,106 @@
+#include "vlsm.h"
+#include "masks.h"
+#include <vector>
+#include <string>
+#include <iostream>
+#include "bin_to_dec.h"
+#include "str_int_str.h"
+using namespace std;
+vlsm::vlsm(){}//ctor
+
+vlsm::~vlsm(){}//dtor
+
+vlsm::vlsm(const vlsm& other){}//copy ctor
+
+vlsm& vlsm::operator=(const vlsm& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+string mlrk;
+int vlsm::gen_them(int arr[],vector<string> soe,vector<string> user_can_hold,vector<string> arr_of_sm,vector<string> mask_as_zone)
+{
+//soe=v_size_of_each
+//user_can_hold=vlkm
+//arr_of_sm=vvlsm_masks
+//mask_as_zone=vvlsm_mask_bd
+
+       Str_int_Str *sit=new Str_int_Str();
+       cout<<"\n";
+       cout<<"--------------------------------------------------------------\n";
+       cout<<"Pre-calculating if the users can fit in the subnet mask u want\n";
+       int x_max=0;
+       int y_umax=0;
+       for(int i=0;i<=user_can_hold.size()-1;i++){
+       x_max=x_max+stoi(user_can_hold.at(i));
+       y_umax=y_umax+stoi(soe.at(i));
+       }
+       cout<<"Sum of users \n";
+       masks *yum=new masks();
+       string yums=to_string(y_umax);
+       string yumx=yum->return_users(yums);
+       cout<<y_umax << " " << yumx << " " << yum->vlsm_mask_bd <<" " << yum->vlsm_mask <<"\n";
+       cout<<"Sum of field \n";
+       masks *xmax=new masks();
+       string xmx=to_string(x_max);
+       string mxmx=xmax->return_users(xmx);
+       cout<<x_max << " " <<  mxmx << " " << xmax->vlsm_mask_bd <<" " << xmax->vlsm_mask <<"\n";
+       cout<<"with typed mask as " << arr[4] <<"\n";
+       string mlar;mlar+=to_string(arr[4]);
+       //if(mlar==xmax->vlsm_mask){cout<<"OK\n";}
+       if(mlar<=xmax->vlsm_mask){cout<<"OK\n";}
+       if(mlar>xmax->vlsm_mask){cout<<"Will Fail\n";}
+       if(x_max>=y_umax){cout<<"Users will be ok\n";}
+       if(y_umax>=x_max){cout<<"U"}
+
+       cout<<"\n";
+       cout<<"----------------Starting Generating The VLSM's / CIDR's  u want ------------------------\n";
+       int lmsk=0;
+       masks *nms=new masks();
+       bin_to_dec *bdd=new bin_to_dec();
+       string vl;
+       vl+=to_string(arr[0]);vl+=".";vl+=to_string(arr[1]);vl+=".";vl+=to_string(arr[2]);
+       vl+=".";vl+=to_string(arr[3]); //vl+="/"; vl+=arr_of_sm.at(0);
+       sit->process_of_string(vl);
+       vl.clear();
+       vl+=sit->returnstr();
+       cout<<"AA " << 0 << " users asked " << soe.at(0) << " max users " ;
+       cout<< user_can_hold.at(0) << " with SM " ;
+       cout<< mask_as_zone.at(0) <<" or as /" << arr_of_sm.at(0) ;
+       cout<<" And \n";
+       cout<<"Starting Ip AddR NetWork " << vl <<"\n" ;
+       cout<<"-------------------------------------------------\n";
+       lmsk=nms->one_to_one(vl,arr_of_sm.at(0));
+       cout<<"-------------------------------------------------\n";
+
+       vl.clear();
+       int mone=arr[0];
+       int mtwo=arr[1];
+       int mthr=arr[2];
+       int mfor=arr[3];
+       int ct=0;
+       int tm=0;
+       string mysity;
+       for(int i=1;i<=soe.size()-1;i++){
+           Str_int_Str *sity=new Str_int_Str();
+           vl+=nms->sof_fir;
+           cout<<"Continue VLSM with " << vl <<"\n";
+           nms->sof_fir.clear();
+           mysity+=nms->sof_fir_as_bn;
+           nms->sof_fir_as_bn.clear();
+           lmsk=0;
+           cout<<"AA " << i << " users asked " << soe.at(i) << " max users " ;
+           cout<< user_can_hold.at(i) << " with SM " ;
+           cout<< mask_as_zone.at(i) <<" or as /" << arr_of_sm.at(i) ;
+           cout<<" And \n";
+           cout<<"Starting Ip AddR NetWork " << mysity <<" ("<<vl <<")\n" ;
+           cout<<"-------------------------------------------------\n";
+           lmsk=nms->one_to_one(mysity,arr_of_sm.at(i));
+           vl.clear();
+           mysity.clear();
+           cout<<"-------------------------------------------------\n";
+        }
+   return 0;
+}
+

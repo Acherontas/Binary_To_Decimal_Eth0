@@ -1,0 +1,41 @@
+#include "conv_it.h"
+#include <iostream>
+#include <stdlib.h>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+conv_it::conv_it(){}//ctor
+
+conv_it::~conv_it(){}//dtor
+
+conv_it::conv_it(const conv_it& other){}//copy ctor
+
+conv_it& conv_it::operator=(const conv_it& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+int conv_it::rconv(string number,int len_var){
+     lvar=len_var;
+     int *ptr=(int*)malloc(sizeof(int)*len_var);
+     char c;
+     int x;
+     int l;
+     for(int i=0;i<=numb.size()-1;i++){
+          c=s.at(i);
+          x=stoi(&c);
+          //cout<<"i " << i << " with x is " << x<<" with " << ptr+i << "\n";
+          *(ptr+i)=x;
+          //ptr[i]=x;
+      }
+      //cout<<"using the ptr with number of digits " << var_len <<"\n";
+      for( int temp=0; temp < len_var; temp++){
+         fly_number*=10;
+         fly_number+=*(ptr+temp);
+       }
+       cout<<"result is " << std::setprecision(len_var) << fly_number << "\n";
+       return 0;
+}

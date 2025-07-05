@@ -1,0 +1,25 @@
+#ifndef CONV_IT_H
+#define CONV_IT_H
+#include <iostream>
+#include <stdlib.h>
+#include <iomanip>
+#include <string>
+using namespace std;
+
+
+class conv_it
+{
+    public:
+        conv_it();
+        virtual ~conv_it();
+        conv_it(const conv_it& other);
+        conv_it& operator=(const conv_it& other);
+        long double fly_number;
+        int lvar=0;
+        int rconv(string number,int len_var);
+    protected:
+
+    private:
+};
+
+#endif // CONV_IT_H

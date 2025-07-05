@@ -1,0 +1,56 @@
+#include "plus_one.h"
+
+plus_one::plus_one(){}//ctor
+
+plus_one::~plus_one(){}//dtor
+
+plus_one::plus_one(const plus_one& other){}//copy ctor
+
+plus_one& plus_one::operator=(const plus_one& rhs)
+{
+    if (this == &rhs) return *this; // handle self assignment
+    //assignment operator
+    return *this;
+}
+
+plus_one::get_bd_to_new(string bd){
+
+string arr[4];
+for(int i=0;i<=4;i++){arr[i]=0;}
+int cnt=0;
+char kl='.';
+string bdl;
+for(int i=0;i<=bd.size()-1;i++){
+  if(kl!='.'){bdl.clear();bdl+=bd.at(i);}
+  if(kl=='.'){
+  arr[cnt]=bdl; 
+  cnt+=1;
+  }
+}
+int x;
+if(arr[4]=="255"){
+       arr[4]="0";
+       x=stoi(arr[3]);
+       x+=1;
+       arr[3]=to_string(x); 
+     }
+     
+if(arr[3]=="255"){
+     arr[3]="0";
+     x=stoi(arr[2]);
+     x+=1;
+     arr[2]=to_string(x);
+    }
+    
+if(arr[2]=="255"){
+    arr[2]="0";
+    x=stoi(arr[1]);
+    x+=1;
+    arr[1]=to_string()
+    
+
+
+
+    }      
+     
+}
